@@ -22,7 +22,7 @@ return new class extends Migration
             $table->timestamps();
 
             $table->foreignId('category_id')->constrained()
-                ->onDelete('cascade');
+                ->onDelete('cascade');                                      //Clave foranea para relacionar la tabla con Categorias mediante "posts.category_id" y "categories.id", relación 1 -> muchos (un post sólo puede tener una categoria, pero una categoria puede estar asignada a muchos posts)
         });
     }
 
